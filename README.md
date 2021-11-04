@@ -10,8 +10,12 @@ It supports importing into "TaggingForWindows", the tag management software.
 
 ## how to use
 1. パスを指定する
-デフォルトでは `./data` が指定されています。
+
+    デフォルトでは `./data` が指定されています。`windowstag2csv.ps1`を編集してパスを指定してください。
    
+
 2. main.batを実行
-tag.csvが生成されます。
+
+    tag.csvが生成されます。
    
+3. TaggingForWindowsにインポート
