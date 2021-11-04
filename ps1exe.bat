@@ -1,0 +1,1 @@
+PowerShell -ExecutionPolicy RemoteSigned .\getproperty.ps1
