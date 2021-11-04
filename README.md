@@ -19,3 +19,5 @@ It supports importing into "TaggingForWindows", the tag management software.
     tag.csvが生成されます。
    
 3. TaggingForWindowsにインポート
+
+   Data -> FromCSVからインポートします。
