@@ -10,11 +10,14 @@ $shellobj = New-Object -COMObject Shell.Application
 $folder = $shellobj.NameSpace($path)
 $csv = @()
 foreach($f in Get-Item "data\*"){
-    $row = New-Object PSObject | Select-Object tag, path
     $fileobj = $folder.ParseName($f.Name)
-    $row.tag = $folder.GetDetailsOf($fileobj, 18) # tag detail is the 18th property
-    $row.path = Resolve-Path $f
-    $csv += $row
+    $tag_list = $folder.GetDetailsOf($fileobj, 18).Split(";") # tag detail is the 18th property
+    foreach($tag_ in $tag_list){
+        $row = New-Object PSObject | Select-Object tag, path
+        $row.tag = $tag_.Replace(" ", "")
+        $row.path = Resolve-Path $f
+        $csv += $row
+    }
 }
 
 # save csv as 'tag.csv'
