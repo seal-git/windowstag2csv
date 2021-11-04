@@ -1,0 +1,1 @@
+PowerShell -ExecutionPolicy RemoteSigned .\windowstag2csv.ps1
